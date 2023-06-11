@@ -1,8 +1,6 @@
 
-class Aircraft {
-    var aircraftNumber: Int = 3045
-    var maximumFlightRange: Int = 8000
-    var tankCapacity: Int = 80000
+class Aircraft (val aircraftNumber: Int,  val maximumFlightRange: Int, val tankCapacity: Int) {
+
     var fuelConsumption: Int = 100
         get() = tankCapacity/maximumFlightRange * 100
 
