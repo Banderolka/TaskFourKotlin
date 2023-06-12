@@ -1,6 +1,6 @@
 
 
- open class Aircraft (val aircraftNumber: Int, val maximumFlightRange: Int, val tankCapacity: Int) {
+ abstract class Aircraft (val aircraftNumber: Int, val maximumFlightRange: Int, val tankCapacity: Int) {
 
 
     var fuelConsumption: Int = 100
