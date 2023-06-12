@@ -6,9 +6,7 @@
     var fuelConsumption: Int = 100
         get() = tankCapacity/maximumFlightRange * 100
 
-     protected fun info() {
-         println("Номер самолета: $aircraftNumber\nМаксимальная дальность полета: $maximumFlightRange\nВместимость бака: $tankCapacity\nРасход топлива на 100 км: $fuelConsumption")
-     }
+     abstract protected fun info()
 
  }
 
@@ -17,8 +15,11 @@
  }
 
  class Boeing747 (aircraftNumber: Int, maximumFlightRange: Int, tankCapacity: Int, override val capacity: Int ): Aircraft (aircraftNumber, maximumFlightRange, tankCapacity), Passenger {
-     override fun info(){
+      override fun info(){
          println("Номер самолета: $aircraftNumber\nМаксимальная дальность полета: $maximumFlightRange\nВместимость бака: $tankCapacity\nРасход топлива на 100 км: $fuelConsumption\n " +
                  "Вместимость: $capacity")
      }
  }
+
+ data class Car(val model: String, val color: String, val number: Int)
+ 
