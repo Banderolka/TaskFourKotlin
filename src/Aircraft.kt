@@ -8,6 +8,8 @@
 
 }
 
- class Boeing747(val capacity: Int, aircraftNumber: Int, maximumFlightRange: Int,tankCapacity: Int): Aircraft (aircraftNumber, maximumFlightRange, tankCapacity){
-
+ interface Passenger{
+     val capacity: Int
  }
+
+ class Boeing747 (aircraftNumber: Int, maximumFlightRange: Int, tankCapacity: Int, override val capacity: Int ): Aircraft (aircraftNumber, maximumFlightRange, tankCapacity), Passenger
